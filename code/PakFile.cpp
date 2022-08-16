@@ -600,14 +600,14 @@ int PakUnpack::ExtractFromArchive(cnv::unsint Count)
 		return 1;
     }
 
-	//Loading the required data segment from the archive
-	ReadBuffer.resize(TOCList.at(Count).CompressSize);
-	OpenArchive.seekg(TOCList.at(Count).DataOffset, std::ios_base::beg);
-	StreamRead(OpenArchive, reinterpret_cast<char*>(ReadBuffer.data()), static_cast<int>(TOCList.at(Count).CompressSize));
-
 	//Trying to unpack the file-entry if it is compressed. After that, getting size of the unpacked file-entry
 	if(TOCList.at(Count).CompressFlag)
 	{
+		//Loading the required data segment from the archive
+		ReadBuffer.resize(TOCList.at(Count).CompressSize);
+		OpenArchive.seekg(TOCList.at(Count).DataOffset, std::ios_base::beg);
+		StreamRead(OpenArchive, reinterpret_cast<char*>(ReadBuffer.data()), static_cast<int>(TOCList.at(Count).CompressSize));
+	
 		//The data is compressed, so the first DWORD is uncompressed size of the file, the remaining bytes are compressed data for the file-entry
 		UncompressedSize = 0;
 		for(cnv::unsint i = 0; i < 4; i++)
@@ -623,7 +623,12 @@ int PakUnpack::ExtractFromArchive(cnv::unsint Count)
 	}
 	else
 	{
-		OpenReceiver.write(reinterpret_cast<const char*>(ReadBuffer.data()), TOCList.at(Count).CompressSize);
+		//Loading the required data segment from the archive
+		ReadBuffer.resize(TOCList.at(Count).UncompressSize);
+		OpenArchive.seekg(TOCList.at(Count).DataOffset, std::ios_base::beg);
+		StreamRead(OpenArchive, reinterpret_cast<char*>(ReadBuffer.data()), static_cast<int>(TOCList.at(Count).UncompressSize));
+		
+		OpenReceiver.write(reinterpret_cast<const char*>(ReadBuffer.data()), TOCList.at(Count).UncompressSize);
 	}
 
 	OpenReceiver.close();

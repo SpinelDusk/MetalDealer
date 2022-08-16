@@ -23,9 +23,9 @@
 /// \brief Global app mutex
 HANDLE Mutex;
 /// \brief App version
-cnv::unistr Version = "1.0.0";
+cnv::unistr Version = "1.0.1";
 /// \brief App build (compilation date)
-cnv::unistr Build = "220726";
+cnv::unistr Build = "220816";
 /// \brief Compile time stamp (compilation date and time - in moment)
 cnv::unistr CompileStamp = CONSTCHARtoUSTRING(__DATE__) + " " + CONSTCHARtoUSTRING(__TIME__);
 /// \brief App command-line arguments string

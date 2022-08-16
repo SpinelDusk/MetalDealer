@@ -1293,6 +1293,7 @@ object FormMain: TFormMain
     GridLines = True
     MultiSelect = True
     GroupView = True
+    ReadOnly = True
     RowSelect = True
     ParentShowHint = False
     ShowHint = True

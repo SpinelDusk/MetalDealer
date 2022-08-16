@@ -66,7 +66,7 @@
         <UWP_CppLogo150>$(BDS)\bin\Artwork\Windows\UWP\cppreg_UwpDefault_150.png</UWP_CppLogo150>
         <SanitizedProjectName>MetalDealer</SanitizedProjectName>
         <VerInfo_Locale>1033</VerInfo_Locale>
-        <VerInfo_Keys>CompanyName=SpinelDusk;FileDescription=Metal Dealer 1.0.0 / 220726;FileVersion=1.0.0.0;InternalName=Metal Dealer;LegalCopyright=SpinelDusk;LegalTrademarks=;OriginalFilename=;ProgramID=;ProductName=Metal Dealer;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=SpinelDusk;FileDescription=Metal Dealer 1.0.1 / 220816;FileVersion=1.0.0.0;InternalName=Metal Dealer;LegalCopyright=SpinelDusk;LegalTrademarks=;OriginalFilename=;ProgramID=;ProductName=Metal Dealer;ProductVersion=1.0.1.0;Comments=</VerInfo_Keys>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <ILINK_GenerateDRC>True</ILINK_GenerateDRC>
     </PropertyGroup>
@@ -123,7 +123,6 @@
         <BCC_UseClassicCompiler>false</BCC_UseClassicCompiler>
         <UWP_CppLogo44>Assets\AppIcon\48.png</UWP_CppLogo44>
         <UWP_CppLogo150>Assets\AppIcon\256.png</UWP_CppLogo150>
-        <VerInfo_Keys>CompanyName=SpinelDusk;FileDescription=Metal Dealer 1.0.0 / 220726;FileVersion=1.0.0.0;InternalName=Metal Dealer;LegalCopyright=SpinelDusk;LegalTrademarks=;OriginalFilename=;ProgramID=;ProductName=Metal Dealer;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <Defines>NDEBUG;$(Defines)</Defines>
@@ -139,7 +138,6 @@
         <AppDPIAwarenessMode>PerMonitor</AppDPIAwarenessMode>
         <UWP_CppLogo44>Assets\AppIcon\48.png</UWP_CppLogo44>
         <UWP_CppLogo150>Assets\AppIcon\256.png</UWP_CppLogo150>
-        <VerInfo_Keys>CompanyName=SpinelDusk;FileDescription=Metal Dealer 1.0.0 / 220726;FileVersion=1.0.0.0;InternalName=Metal Dealer;LegalCopyright=SpinelDusk;LegalTrademarks=;OriginalFilename=;ProgramID=;ProductName=Metal Dealer;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
     </PropertyGroup>
     <ItemGroup>
         <CppCompile Include="CHF.cpp">
